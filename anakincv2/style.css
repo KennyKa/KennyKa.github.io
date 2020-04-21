@@ -95,7 +95,6 @@ aside {
 
 h1 {
   font-size: min(max(3vw, 16px), 40px);
-  max-font-size: 40px;
 /*   font-size: 40px; */
   width: 8em;
   position: absolute;
