@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="awesomewebsite/index.html">asd</a>
+    <a href="awesomewebsite/index.html">Awesome website</a>
 </body>
 </html>
