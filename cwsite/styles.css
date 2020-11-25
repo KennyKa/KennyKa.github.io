@@ -151,6 +151,7 @@ header {
     padding: 20px;
     width: 100%;
     height: 30px;
+    z-index: 80;
 }
 
 .left-area h3 {
@@ -529,6 +530,7 @@ main .right-content{
     main .left-content{
         max-width: 100%;
         padding: 1rem;
+        padding-top: 0;
         box-sizing: border-box;
     }
     
