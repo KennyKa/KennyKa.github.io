@@ -804,10 +804,6 @@ main .right-content{
         justify-self: center;
     }
 
-    .img-wrapper#few-pic{
-        justify-content: center;
-    }
-
     .img-wrapper img {
         width: 5rem;
         margin-left: 5px;
