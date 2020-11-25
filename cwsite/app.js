@@ -1,3 +1,4 @@
+
 // Change tabs
 const tabs = document.querySelectorAll('.nav-item');
 const panels = document.querySelectorAll('.panel');
@@ -128,3 +129,90 @@ imageViewer(paperfactoryImages)
 imageViewer(bscImages)
 imageViewer(spintopImages)
 imageViewer(rehauImages)
+
+
+//Scrolling
+function goRight(imgContainer) {
+    imgContainer.scrollBy(100, 0);
+}
+
+function goLeft(imgContainer) {
+    imgContainer.scrollBy(-100, 0);
+}
+
+// Rehau buttons and gallery
+let rehauRightBtn = document.querySelector('#rehau-right-btn')
+let rehauLeftBtn = document.querySelector('#rehau-left-btn')
+
+rehauRightBtn.addEventListener('click', function() {
+    let imgContainer = rehauRightBtn.previousElementSibling
+    goRight(imgContainer);
+});
+
+rehauLeftBtn.addEventListener('click', function() {
+    let imgContainer = rehauLeftBtn.nextElementSibling
+    goLeft(imgContainer);
+});
+
+// Gyongyons buttons and gallery
+
+// Paperfactory buttons and gallery
+let paperFactoryRightBtn = document.querySelector('#paperfactory-right-btn')
+let paperFactoryLeftBtn = document.querySelector('#paperfactory-left-btn')
+
+paperFactoryRightBtn.addEventListener('click', function() {
+    let imgContainer = paperFactoryRightBtn.previousElementSibling
+    goRight(imgContainer);
+});
+
+paperFactoryLeftBtn.addEventListener('click', function() {
+    let imgContainer = paperFactoryLeftBtn.nextElementSibling
+    goLeft(imgContainer);
+});
+
+// Tower buttons and gallery
+let towerRightBtn = document.querySelector('#tower-right-btn')
+let towerLeftBtn = document.querySelector('#tower-left-btn')
+
+towerRightBtn.addEventListener('click', function() {
+    let imgContainer = towerRightBtn.previousElementSibling
+    goRight(imgContainer);
+});
+
+towerLeftBtn.addEventListener('click', function() {
+    let imgContainer = towerLeftBtn.nextElementSibling
+    goLeft(imgContainer);
+});
+
+// Bsc buttons and gallery
+let bscRightBtn = document.querySelector('#bsc-right-btn')
+let bscLeftBtn = document.querySelector('#bsc-left-btn')
+
+bscRightBtn.addEventListener('click', function() {
+    let imgContainer = bscRightBtn.previousElementSibling
+    goRight(imgContainer);
+});
+
+bscLeftBtn.addEventListener('click', function() {
+    let imgContainer = bscLeftBtn.nextElementSibling
+    goLeft(imgContainer);
+});
+
+// Spintop lamp buttons and gallery
+let spintopRightBtn = document.querySelector('#spintop-right-btn')
+let spintopLeftBtn = document.querySelector('#spintop-left-btn')
+
+spintopRightBtn.addEventListener('click', function() {
+    let imgContainer = spintopRightBtn.previousElementSibling
+    goRight(imgContainer);
+});
+
+spintopLeftBtn.addEventListener('click', function() {
+    let imgContainer = spintopLeftBtn.nextElementSibling
+    goLeft(imgContainer);
+});
+
+
+
+console.log(rehauLeftBtn.nextElementSibling)
+console.log(rehauRightBtn.previousElementSibling)
