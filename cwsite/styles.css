@@ -79,7 +79,7 @@ body::-webkit-scrollbar-thumb {
     display: none;
     margin-left: 1rem;
     transition: all 400ms ease;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -116,24 +116,6 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-/* Hover animation start */
-
-
-/* .navbar:hover {
-    width: 14rem;
-}
-
-.navbar:hover .link-text {
-    display: block;
-}
-
-.navbar:hover .portrait {
-    display: block;
-}
- */
-
- /* Hover animation end */
-
 .portrait {
     position: absolute;
     left: 50%;
@@ -151,7 +133,7 @@ header {
     padding: 20px;
     width: 100%;
     height: 30px;
-    z-index: 80;
+    z-index: 120;
 }
 
 .left-area h3 {
@@ -167,7 +149,7 @@ header {
 }
 
 label #sidebar-btn {
-    z-index: 1;
+    z-index: 120;
     color: #fff;
     position: fixed;
     cursor: pointer;
@@ -223,7 +205,7 @@ main {
     color: var(--text-primary);
     background: var(--bg-secondary);
     transition: var(--transition-speed);
-    width: 90%;
+    width: 100%;
     min-height: 100vh;
     height: 100vh;
     justify-content: flex-end;
@@ -231,8 +213,8 @@ main {
 
 main .left-content{
     padding-left: 2rem;
-    min-width: 40%;
-    max-width: 40%;
+    min-width: 50%;
+    max-width: 50%;
     display: flex;
     max-height: 100vh;
 }
@@ -250,7 +232,7 @@ main .left-content{
 }
 
 .title {
-    margin-top: 60%;
+    margin-top: 35%;
     font-size: 5rem;
     margin-bottom: 0px;
     padding: 0px;
@@ -447,7 +429,7 @@ main .right-content{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 300;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -457,7 +439,7 @@ main .right-content{
 .popup-img {
     max-height: 80vh;
     max-width: 80vw;
-    z-index: 200;
+    z-index: 350;
 }
 
 .img-btn-next {
@@ -494,8 +476,6 @@ main .right-content{
 }
 
 
-
-
 @media screen and (max-width: 1150px) {
 
     main {
@@ -513,6 +493,7 @@ main .right-content{
         display: none;
     }
 }
+
 
 @media screen and (max-width: 720px) {
 
@@ -542,10 +523,8 @@ main .right-content{
     .nav-link .fas {
     display: none;
     }
-
-    
-/* Itt kezdődött */
-    
+   
+   
     /* Navbar and header start */
     .navbar {
         width: 100%;
@@ -553,9 +532,10 @@ main .right-content{
         flex-direction: column;
         height: 28rem;
         position: fixed;
-
-        top: -100%;
+        transition: var(--transition-speed);
+        top: -300%;
         opacity: 0;
+        z-index: 90;
     }
 
     .navbar br {
@@ -564,9 +544,7 @@ main .right-content{
 
     .navbar-nav {
         display: grid;
-        grid-template-columns: auto;
-        
-  
+        grid-template-columns: auto;  
     }
 
     .nav-item {
@@ -577,19 +555,13 @@ main .right-content{
 
 
     .nav-link {
-        display: flex;
-        align-items: center;
         height: 3rem;
-        color: var(--text-primary);
-        text-decoration: none;
-        transition: var(--transition-speed);
         justify-content: center;
-
     }
 
     .link-text {
         transition: all 400ms ease;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: bold;
         padding-bottom: 0px;
         margin-left: 0px;
@@ -598,50 +570,16 @@ main .right-content{
     }
 
     .nav-item:hover .link-text {
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
 
-    .nav-item:first-child {
-        align-items: center;
-        margin-top: 0px;
-    }
     
     .nav-item:last-child {
-        margin-bottom: 0px;
-    }
-
-
-
-    header {
-        position: fixed;
-        background: var(--bg-primary);
-        padding: 20px;
-        width: 100%;
-        height: 30px;
-    }
-
-    .left-area h3 {
-        color: #fff;
-        margin: 0;
-        text-transform: uppercase;
-        font-size: 22px;
-        font-weight: 900;
-    }
-
-    .left-area span {
-        color: var(--text-hover);
+        margin-bottom: 10px;
     }
 
     label #sidebar-btn {
-        z-index: 1;
-        color: #fff;
-        position: fixed;
-        cursor: pointer;
         left: 80%;
-        font-size: 30px;
-        margin: 5px 0;
-        transition: 500ms;
-        transition-property: color;
     }
 
     label #sidebar-btn:hover {
@@ -668,29 +606,19 @@ main .right-content{
 
     #check:checked ~ .main-content {
         margin-left: 0rem;
-/*         margin-top: 23rem; */
     }
 
     #check {
         display: none;
     }
 
-    #tabbed-content .panel {
-        display: none;
-    }
-
-    #tabbed-content .panel.active {
-        display: block;
-    }
-
     .img-wrapper#few-pic{
         justify-content: flex-start;
     }
-
     /* Navbar and header end */
 
+    
     /* Main content start */
-
     .panel::-webkit-scrollbar {
         display: none;
     }
@@ -705,10 +633,6 @@ main .right-content{
     .title {
         margin-top: 10%;
         font-size: 3rem;
-        margin-bottom: 0px;
-        padding: 0px;
-        margin-left: 20px;
-        margin-right: 20px;
         line-height: 3rem;
     }
 
@@ -739,23 +663,16 @@ main .right-content{
     }
 
     .description {
-        text-align: justify;
-        text-justify: inter-word;
         font-size: 0.8rem;
     }
 
     .school {
-        display: flex;
-        flex-direction: column;
         margin-top: 3rem;
     }
 
     .company {
-        display: flex;
-        flex-direction: column;
         margin-top: 60px;
     }
-
 
     /* Main left content end */
 
@@ -827,19 +744,7 @@ main .right-content{
         height: 0.25rem;
     } */
 
-
-    .img-wrapper::-webkit-scrollbar-track {
-        background: #1e1e24;
-    }
-
-    .img-wrapper::-webkit-scrollbar-thumb {
-        background: var(--text-primary);
-    }
-
     /* Main right content end */
-
-
-
 
     /* Media screen start */
 
@@ -847,57 +752,24 @@ main .right-content{
 
     .img-window {
         width: 100%;
-        height: 100vh;
-        background: rgba(0,0,0,0.8);
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .popup-img {
         max-height: 80%;
         max-width: 80%;
-        z-index: 200;
+        z-index: 350;
         margin-top: auto;
         margin-bottom: auto;
     }
 
     .img-btn-next {
-        display: block;
         font-size: 1rem;
         padding: 8px 20px;
-        border-radius: 4px;
-        background-color: #111111;
-        position: fixed;
-        top: 48vh;
-        z-index: 500;
-        color: var(--text-secondary);
-        cursor: pointer;
-        right: 0;
     }
 
     .img-btn-prev {
-        display: block;
         font-size: 1rem;
         padding: 8px 20px;
-        border-radius: 4px;
-        background-color: #111111;
-        position: fixed;
-        top: 48vh;
-        z-index: 500;
-        color: var(--text-secondary);
-        cursor: pointer;
-        left: 0;
-    }
-
-    .img-btn-next:hover, .img-btn-prev:hover {
-        background-color: #282828;
-        transition: 0.2s ease-out;
     }
 
     .change-img-left, .change-img-right {
