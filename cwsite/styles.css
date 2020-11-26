@@ -6,7 +6,7 @@
     --bg-primary: #181818;
     --bg-secondary: #202020;
     --text-hover: #c43f3a; 
-    --accent-color: #564e77;
+    --accent-color: #48ce9b;
     --transition-speed: 400ms;
 }
 
@@ -523,13 +523,13 @@ main .right-content{
     main {
         justify-content: flex-start;
         margin-left: 0rem;
-        width: 90%;
-        max-width: 90%;
+        width: 100%;
+        max-width: 100%;
     }
 
     main .left-content{
         max-width: 100%;
-        padding: 1rem;
+        padding: 0.5rem;
         padding-top: 0;
         box-sizing: border-box;
     }
@@ -544,20 +544,18 @@ main .right-content{
     }
 
     
-
+/* Itt kezdődött */
     
     /* Navbar and header start */
     .navbar {
-        width: 100vw;
-        margin-top: 70px;
-        position: fixed;
+        width: 100%;
         display: flex;
-        background-color: var(--bg-primary);
-        transition: var(--transition-speed) ease;
-        text-decoration: none;
-        display: none;
-        max-width: 100%;
-        justify-content: flex-start;
+        flex-direction: column;
+        height: 28rem;
+        position: fixed;
+
+        top: -100%;
+        opacity: 0;
     }
 
     .navbar br {
@@ -565,11 +563,10 @@ main .right-content{
     }
 
     .navbar-nav {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        justify-content: flex-start;   
-        width: 100%;    
+        display: grid;
+        grid-template-columns: auto;
+        
+  
     }
 
     .nav-item {
@@ -587,6 +584,7 @@ main .right-content{
         text-decoration: none;
         transition: var(--transition-speed);
         justify-content: center;
+
     }
 
     .link-text {
@@ -595,7 +593,8 @@ main .right-content{
         font-weight: bold;
         padding-bottom: 0px;
         margin-left: 0px;
-        box-shadow: 0 4px 2px -2px var(--accent-color);
+        box-shadow: 0 4px 2px -2px var(--text-hover);
+        display: block;
     }
 
     .nav-item:hover .link-text {
@@ -638,7 +637,7 @@ main .right-content{
         color: #fff;
         position: fixed;
         cursor: pointer;
-        left: 60%;
+        left: 80%;
         font-size: 30px;
         margin: 5px 0;
         transition: 500ms;
@@ -653,7 +652,10 @@ main .right-content{
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: 23rem;        
+        height: 23rem;  
+        left: 0%;
+        top: 0;
+        opacity: 1;      
     }
 
     #check:checked ~ .navbar .link-text {
@@ -666,7 +668,7 @@ main .right-content{
 
     #check:checked ~ .main-content {
         margin-left: 0rem;
-        margin-top: 23rem;
+/*         margin-top: 23rem; */
     }
 
     #check {

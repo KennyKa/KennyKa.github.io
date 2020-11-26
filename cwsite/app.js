@@ -3,6 +3,9 @@
 const tabs = document.querySelectorAll('.nav-item');
 const panels = document.querySelectorAll('.panel');
 
+let checkBox = document.querySelector('#check');
+let innerWidth = window.innerWidth
+
 tabs.forEach(item => {
     item.addEventListener('click', function(e){
         let targetPanel = '';
@@ -20,6 +23,12 @@ tabs.forEach(item => {
                 panel.classList.remove('active');
             }
         })
+
+        if(innerWidth <= 720) {
+            innerWidth = window.innerWidth;
+            checkBox.checked = false;
+        }
+
     })
 })
 
@@ -199,7 +208,7 @@ bscLeftBtn.addEventListener('click', function() {
 });
 
 // Spintop lamp buttons and gallery
-let spintopRightBtn = document.querySelector('#spintop-right-btn')
+/* let spintopRightBtn = document.querySelector('#spintop-right-btn')
 let spintopLeftBtn = document.querySelector('#spintop-left-btn')
 
 spintopRightBtn.addEventListener('click', function() {
@@ -215,4 +224,4 @@ spintopLeftBtn.addEventListener('click', function() {
 
 
 console.log(rehauLeftBtn.nextElementSibling)
-console.log(rehauRightBtn.previousElementSibling)
+console.log(rehauRightBtn.previousElementSibling) */
