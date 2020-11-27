@@ -10,13 +10,19 @@
     --transition-speed: 400ms;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: black;
     background-color: var(--bg-secondary);
     margin: 0;
     padding: 0;
-    display:flex;
+    display: flex;
     width: 100%;
+    height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -41,6 +47,7 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--bg-primary);
     transition: var(--transition-speed) ease;
     text-decoration: none;
+    z-index: 120;
 }
 
 .navbar-nav {
@@ -78,10 +85,13 @@ body::-webkit-scrollbar-thumb {
 
 .link-text {
     display: none;
+    position: fixed;
     margin-left: 1rem;
-    transition: all 400ms ease;
+    transition: all var(--transition-speed) ease;
+    transition-delay: 0.25s;
     font-size: 22px;
     font-weight: bold;
+    opacity: 0;    
 }
 
 .nav-link .fas {
@@ -119,12 +129,27 @@ body::-webkit-scrollbar-thumb {
 
 .portrait {
     position: absolute;
+    display: none;
     left: 50%;
     max-width: 10rem;
     border-radius: 50%;
-    display: none;
     margin-left: -5rem;
     margin-top: 1rem;
+    opacity: 1;
+    transition: var(--transition-speed) ease;
+    animation: fade-in calc(2 * var(--transition-speed)) 1 linear;
+    }
+
+    @keyframes fade-in {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -149,6 +174,10 @@ header {
     color: var(--text-hover);
 }
 
+.panel::-webkit-scrollbar {
+    display: none;
+}
+
 label #sidebar-btn {
     z-index: 120;
     color: #fff;
@@ -171,10 +200,30 @@ label #sidebar-btn:hover {
 
 #check:checked ~ .navbar .link-text {
     display: block;
+    left: 5rem;
+    opacity: 1;
+    animation: fade-in var(--transition-speed) 1 linear;
+    }
+
+    @keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #check:checked ~ .navbar .portrait {
     display: block;
+    opacity: 1;
+    animation: fade-in var(--transition-speed) 1 linear;
 }
 
 #check:checked ~ .main-content {
@@ -191,6 +240,7 @@ label #sidebar-btn:hover {
 
 #tabbed-content .panel.active {
     display: block;
+    animation: fade-in var(--transition-speed) 1 linear;
 }
 
 /* Navbar and header end */
@@ -208,23 +258,20 @@ main {
     transition: var(--transition-speed);
     width: 100%;
     min-height: 100vh;
+    max-height: 100vh;
     height: 100vh;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 main .left-content{
     padding-left: 1.5rem;
-    min-width: 45%;
-    max-width: 45%;
-    width: 500px;
-    display: block;
+    min-width: 600px;
+    max-width: 850px;
+    margin-right: auto;
+    display: flex;
     max-height: 100vh;
 }
 
-
-.panel::-webkit-scrollbar {
-    display: none;
-}
 
 
 .panel {
@@ -297,12 +344,16 @@ main .left-content{
 /* Main right content start */
 
 main .right-content{
+    display: flex;
     padding-left: 3rem;
-    width: 50%;
-    justify-content: flex-end;
-    margin: auto;
-    align-self: flex-end;
+    min-width: 35vw;
+    max-width: 45vw;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
     max-height: 100vh;
+    height: calc(100vh - 700px);
 /*     overflow-wrap: break-word; */
 }
 
@@ -372,10 +423,6 @@ main .right-content{
     height: 0rem;
 }
 
-/* .img-wrapper:hover::-webkit-scrollbar {
-    height: 0.25rem;
-} */
-
 
 .img-wrapper::-webkit-scrollbar-track {
     background: #1e1e24;
@@ -386,7 +433,6 @@ main .right-content{
 }
 
 .gallery-container {
-/*     position: relative; */
     display: flex;
 }
 
@@ -420,10 +466,6 @@ main .right-content{
 
 /* Main right content end */
 
-
-
-
-/* Media screen start */
 
 /* Popup window when clicked */
 
@@ -489,7 +531,7 @@ main .right-content{
 
     main .left-content{
         min-width: 100%;
-        max-width: 100%;
+        max-width: 600px;
         padding: 1rem;
         box-sizing: border-box;
     }
@@ -516,9 +558,11 @@ main .right-content{
 
     main .left-content{
         max-width: 100%;
+        width: 100vh;
         padding: 0.5rem;
         padding-top: 0;
         box-sizing: border-box;
+        display: block;
     }
     
 
@@ -536,12 +580,28 @@ main .right-content{
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: 28rem;
+        height: 23rem;
         position: fixed;
         transition: var(--transition-speed);
-        top: -300%;
+        top: -30%;
         opacity: 0;
         z-index: 90;
+        animation: fade-out var(--transition-speed) 1 linear;
+    }
+
+    @keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+    }        
     }
 
     .navbar br {
@@ -566,13 +626,13 @@ main .right-content{
     }
 
     .link-text {
-        transition: all 400ms ease;
         font-size: 1.3rem;
         font-weight: bold;
         padding-bottom: 0px;
         margin-left: 0px;
         box-shadow: 0 4px 2px -2px var(--text-hover);
-        display: block;
+        display: none;
+        animation: fade-out var(--transition-speed) 1 linear;
     }
 
     .nav-item:hover .link-text {
@@ -599,11 +659,16 @@ main .right-content{
         height: 23rem;  
         left: 0%;
         top: 0;
-        opacity: 1;      
+        display: block;
+        opacity: 1;
+        animation: fade-in var(--transition-speed) 1 linear;    
     }
 
     #check:checked ~ .navbar .link-text {
         display: block;
+        left: auto;
+        right: auto;
+        animation: fade-in var(--transition-speed) 1 linear;
     }
 
     #check:checked ~ .navbar .portrait {
@@ -682,7 +747,6 @@ main .right-content{
 
     /* Main left content end */
 
-
     /* Main right content start */
 
     .own-projects h2{
@@ -746,13 +810,8 @@ main .right-content{
         height: 0rem;
     }
 
-    /* .img-wrapper:hover::-webkit-scrollbar {
-        height: 0.25rem;
-    } */
-
     /* Main right content end */
 
-    /* Media screen start */
 
     /* Popup window when clicked */
 
