@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     display:flex;
+    width: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -212,10 +213,11 @@ main {
 }
 
 main .left-content{
-    padding-left: 2rem;
-    min-width: 50%;
-    max-width: 50%;
-    display: flex;
+    padding-left: 1.5rem;
+    min-width: 45%;
+    max-width: 45%;
+    width: 500px;
+    display: block;
     max-height: 100vh;
 }
 
@@ -224,11 +226,14 @@ main .left-content{
     display: none;
 }
 
+
 .panel {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 100%;
 }
 
 .title {
@@ -483,6 +488,7 @@ main .right-content{
     }
 
     main .left-content{
+        min-width: 100%;
         max-width: 100%;
         padding: 1rem;
         box-sizing: border-box;

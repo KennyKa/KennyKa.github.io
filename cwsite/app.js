@@ -2,6 +2,7 @@
 // Change tabs
 const tabs = document.querySelectorAll('.nav-item');
 const panels = document.querySelectorAll('.panel');
+let mainLeft = document.querySelector('.panel')
 
 let checkBox = document.querySelector('#check');
 let innerWidth = window.innerWidth
@@ -28,7 +29,9 @@ tabs.forEach(item => {
             innerWidth = window.innerWidth;
             checkBox.checked = false;
         }
-
+        
+        mainLeft = document.querySelector('.panel.active')
+        mainLeft.scrollTo(0, 0);
     })
 })
 
@@ -152,6 +155,7 @@ function goLeft(imgContainer) {
 // Rehau buttons and gallery
 let rehauRightBtn = document.querySelector('#rehau-right-btn')
 let rehauLeftBtn = document.querySelector('#rehau-left-btn')
+
 
 rehauRightBtn.addEventListener('click', function() {
     let imgContainer = rehauRightBtn.previousElementSibling
