@@ -228,6 +228,7 @@ label #sidebar-btn:hover {
 
 #check:checked ~ .main-content {
     margin-left: 14rem;
+    filter: blur(5px);
 }
 
 #check {
@@ -660,7 +661,7 @@ main .right-content{
         left: 0%;
         top: 0;
         display: block;
-        opacity: 1;
+        opacity: 0.85;
         animation: fade-in var(--transition-speed) 1 linear;    
     }
 

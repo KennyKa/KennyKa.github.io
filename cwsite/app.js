@@ -25,10 +25,12 @@ tabs.forEach(item => {
             }
         })
 
-        if(innerWidth <= 720) {
+/*         if(innerWidth <= 720) {
             innerWidth = window.innerWidth;
             checkBox.checked = false;
-        }
+        } */
+        
+        checkBox.checked = false;
         
         mainLeft = document.querySelector('.panel.active')
         mainLeft.scrollTo(0, 0);
