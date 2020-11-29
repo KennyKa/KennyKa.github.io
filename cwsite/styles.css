@@ -268,6 +268,7 @@ main .left-content{
     padding-left: 1.5rem;
     min-width: 600px;
     max-width: 850px;
+    width: 1000px;
     margin-right: auto;
     display: flex;
     max-height: 100vh;
@@ -523,6 +524,106 @@ main .right-content{
     transition: 0.2s ease-out;
 }
 
+.subtitle.left {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 10%;
+    font-size: 3rem;
+}
+
+.subtitle.right {
+    width: 100%;
+    margin-top: 30px;
+    margin-right: 10%;
+    font-size: 3rem;
+    text-align: end;
+}
+
+.about {
+    display: flex;
+    width: 100%;
+/*     background: green; */
+    min-height: 10rem;
+    align-items: center;
+}
+
+.about img{
+    width: 100%;
+    height: auto;
+}
+
+.about-description.first{
+    width: 85%;
+}
+
+.about-description.second {
+    width: 70%;
+}
+
+.about-img.first{
+    width: 15%
+}
+
+.about-img.second {
+    width: 30%
+}
+
+.about.second {
+    flex-direction: row-reverse;
+}
+
+.skill-wrapper {
+    width: 500px;
+    margin: 60px auto;
+    color: var(--text-primary);
+}
+
+.skill-ul {
+    list-style: none;
+    padding-left: 0;
+/*     columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2; */
+}
+
+.skill-wrapper li {
+    margin: 20px 0;
+}
+
+.bar {
+    background: var(--bg-secondary);
+    display: block;
+    height: 3px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--text-hover);
+}
+
+.bar span {
+    height: 3px;
+    float: left;
+    background: var(--text-hover);
+}
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 65%;
+}
+
+.jquery {
+    width: 50%;
+}
+
+.javascript {
+    width: 70%;
+}
+
+
+
 
 @media screen and (max-width: 1200px) and  (max-height: 720px) {
 
@@ -682,6 +783,7 @@ main .right-content{
     .link-text {
         font-size: 1.3rem;
         font-weight: bold;
+        color: var(--text-primary);
         padding-bottom: 0px;
         margin-left: 0px;
         box-shadow: 0 4px 2px -2px var(--text-hover);

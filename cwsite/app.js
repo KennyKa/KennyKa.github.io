@@ -31,7 +31,7 @@ tabs.forEach(item => {
         } */
         
         checkBox.checked = false;
-        
+
         mainLeft = document.querySelector('.panel.active')
         mainLeft.scrollTo(0, 0);
     })
@@ -231,3 +231,14 @@ spintopLeftBtn.addEventListener('click', function() {
 
 console.log(rehauLeftBtn.nextElementSibling)
 console.log(rehauRightBtn.previousElementSibling) */
+
+/* var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+); */
