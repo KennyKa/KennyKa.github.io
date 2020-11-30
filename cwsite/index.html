@@ -519,11 +519,42 @@
                         </li>
                     </ul>
                 </div>
-                <div class="subtitle email">
-                    Send me an email
-                </div>
-                <div class="picture-mid">
-                    <img src="svg_img/taxi-812.png" alt="">
+                <div class="form-container">
+                    <div class="subtitle email">
+                        Send me an email
+                    </div>
+                    <div class="picture-mid">
+                        <img src="svg_img/taxi-812.png" alt="">
+                    </div>
+                    <form action="POST" data-netlify="true">
+                        <div class="fields">
+                            <div class="field full">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Name" />
+                            </div>
+                            <div class="field full">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Email" />
+                            </div>
+                            <div class="field full">
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject" id="subject" placeholder="Subject" />
+                            </div>
+                            <div class="field full">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+                            </div>
+                            <div data-netlify-recaptcha="true">
+
+                            </div>
+                            <div class="field full" id="center-btn">
+                                <input type="submit" value="Send Message" class="button primary" id="submit"/></li>
+                            </div>
+                        </div>
+<!--                         <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="button primary" /></li>
+                        </ul> -->
+                    </form>
                 </div>
             </div>
             <!-- Contact end -->
