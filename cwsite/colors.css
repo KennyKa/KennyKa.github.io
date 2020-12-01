@@ -39,3 +39,18 @@
     --transition-speed: 400ms;
     --lightgray: #b1b1b1;
 }
+
+/* My livingroom color scheme -- It needs some work */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    --text-primary: #F2F2F2;
+    --text-secondary: #c7b299;
+    --bg-primary: #004D77;
+    --bg-secondary:#C7B299;
+    --text-hover: #F2F2F2; 
+    --transition-speed: 400ms;
+    --lightgray: #b1b1b1;
+    --pr-bar: #004D77;
+}

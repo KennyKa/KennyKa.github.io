@@ -1,4 +1,4 @@
-:root {
+/* :root {
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
     --text-primary: #b6b6b6;
@@ -9,19 +9,20 @@
     --accent-color: #48ce9b;
     --transition-speed: 400ms;
     --lightgray: #b1b1b1;
-}
+} */
 
-/* :root {
+:root {
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
-    --text-primary: #F0F6F7FF;
-    --text-secondary: #2BAE66FF;
-    --bg-primary: #F0F6F7FF;
-    --bg-secondary:#2BAE66FF;
-    --text-hover: #464d4e; 
+    --text-primary: #F2F2F2;
+    --text-secondary: #c7b299;
+    --bg-primary: #004D77;
+    --bg-secondary:#C7B299;
+    --text-hover: #F2F2F2; 
     --transition-speed: 400ms;
     --lightgray: #b1b1b1;
-} */
+    --pr-bar: #004D77;
+}
 
 
 html {
@@ -176,7 +177,7 @@ header {
 }
 
 .left-area h3 {
-    color: #fff;
+    color: var(--text-primary);
     margin: 0;
     text-transform: uppercase;
     font-size: 22px;
@@ -184,7 +185,7 @@ header {
 }
 
 .left-area span {
-    color: var(--text-hover);
+    color: var(--text-secondary);
 }
 
 .panel::-webkit-scrollbar {
@@ -639,13 +640,13 @@ main .right-content{
     border: 1px solid rgba(0,0,0,0.3);
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 0 10px var(--text-hover);
+    box-shadow: 0 0 10px var(--pr-bar);
 }
 
 .bar span {
     height: 3px;
     float: left;
-    background: var(--text-hover);
+    background: var(--pr-bar);
 }
 
 .grasshopper {
@@ -867,14 +868,15 @@ a:visited {
     background: var(--bg-primary);
     border-radius: 20px;
     box-shadow: -5px -5px 10px rgba(255,255,255, 0.1),
-                5px 5px 15px rgba(0,0,0, 0.5);
+                5px 5px 15px rgba(0,0,0, 0.6);
 }
+
 
 .fields{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 90%;
+    width: 85%;
     margin: 0 auto 0;
 }
 
@@ -1147,10 +1149,10 @@ a:visited {
     .link-text {
         font-size: 1.3rem;
         font-weight: bold;
-        color: var(--text-primary);
+        color: var(--text-secondary);
         padding-bottom: 0px;
         margin-left: 0px;
-        box-shadow: 0 4px 2px -2px var(--text-hover);
+        box-shadow: 0 4px 2px -2px var(--text-secondary);
         display: none;
         animation: fade-out var(--transition-speed) 1 linear;
     }
