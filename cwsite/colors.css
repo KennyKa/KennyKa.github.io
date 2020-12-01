@@ -8,3 +8,34 @@
     --text-hover: #c43f3a; 
     --transition-speed: 400ms;
 }
+
+
+/* Black - grey - red color scheme */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #181818;
+    --bg-secondary:#202020;
+    --text-hover: #c43f3a; 
+    --accent-color: #48ce9b;
+    --transition-speed: 400ms;
+    --lightgray: #b1b1b1;
+}
+
+/* Green - blue(?) - white scheme */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    --text-primary: #3a7c8a;
+/*     --text-primary: #3aafa9; */
+    --text-secondary:  #F0F6F7FF;
+    --bg-primary: #2BAE66FF;
+    --bg-secondary: #F0F6F7FF;
+    --text-hover: #464d4e; 
+    --transition-speed: 400ms;
+    --lightgray: #b1b1b1;
+}
