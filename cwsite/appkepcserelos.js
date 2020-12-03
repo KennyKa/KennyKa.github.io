@@ -44,8 +44,6 @@ let towerImages = document.querySelectorAll('.tower-img');
 let bscImages = document.querySelectorAll('.bsc-img');
 let spintopImages = document.querySelectorAll('.spintop-img');
 let rehauImages = document.querySelectorAll('.rehau-img');
-let schoolImages = document.querySelectorAll('.school-img');
-let giantImages = document.querySelectorAll('.giant-img');
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 
@@ -63,15 +61,16 @@ function imageViewer(imgGalleryClass) {
             fullSource = image.src;
             imageName = (index + 1) + '.jpg';
             rawSource = '"' + fullSource.replace(imageName, '') + '"';
+            rawSourceClean = fullSource.replace(imageName, '');
             containerLen = imgGalleryClass.length;   
     
             console.log(rawSource);
-/*             if(rawSource == '"http://127.0.0.1:5500/projects_img/img"') {
+            if(rawSource == '"http://127.0.0.1:5500/projects_img/img"') {
                 console.log('YES');
             } else {
                 console.log(rawSource);
                 console.log("http://127.0.0.1:5500/projects_img/img");
-            } */
+            }
     
             getLatestOpenedImg = index + 1;
     
@@ -82,6 +81,8 @@ function imageViewer(imgGalleryClass) {
             newImgWindow.setAttribute('onclick', 'closeImg()');
     
             let newImg = image.cloneNode();
+            newImg.src = rawSourceClean + getLatestOpenedImg + (`prew.jpg`);
+            console.log(newImg.src)
             newImgWindow.appendChild(newImg);
             newImg.classList.add('popup-img');
             newImg.setAttribute('id', 'current-img');    
@@ -125,7 +126,7 @@ function changeImg(change, path, containerLen) {
         }
     }
 
-    newImg.setAttribute('src', path + calcNewImg + '.jpg');
+    newImg.setAttribute('src', path + calcNewImg + 'prew.jpg');
     newImg.setAttribute('class', 'popup-img');
     newImg.setAttribute('id', 'current-img');
 
@@ -145,8 +146,6 @@ imageViewer(paperfactoryImages)
 imageViewer(bscImages)
 imageViewer(spintopImages)
 imageViewer(rehauImages)
-imageViewer(schoolImages)
-imageViewer(giantImages)
 
 
 //Scrolling
@@ -173,20 +172,7 @@ rehauLeftBtn.addEventListener('click', function() {
     goLeft(imgContainer);
 });
 
-// Gyongyos buttons and gallery
-let giantRightBtn = document.querySelector('#giant-right-btn')
-let giantLeftBtn = document.querySelector('#giant-left-btn')
-
-
-giantRightBtn.addEventListener('click', function() {
-    let imgContainer = giantRightBtn.previousElementSibling
-    goRight(imgContainer);
-});
-
-giantLeftBtn.addEventListener('click', function() {
-    let imgContainer = giantLeftBtn.nextElementSibling
-    goLeft(imgContainer);
-});
+// Gyongyons buttons and gallery
 
 // Paperfactory buttons and gallery
 let paperFactoryRightBtn = document.querySelector('#paperfactory-right-btn')
@@ -199,21 +185,6 @@ paperFactoryRightBtn.addEventListener('click', function() {
 
 paperFactoryLeftBtn.addEventListener('click', function() {
     let imgContainer = paperFactoryLeftBtn.nextElementSibling
-    goLeft(imgContainer);
-});
-
-// School buttons and gallery
-let schoolRightBtn = document.querySelector('#school-right-btn')
-let schoolLeftBtn = document.querySelector('#school-left-btn')
-
-
-schoolRightBtn.addEventListener('click', function() {
-    let imgContainer = schoolRightBtn.previousElementSibling
-    goRight(imgContainer);
-});
-
-schoolLeftBtn.addEventListener('click', function() {
-    let imgContainer = schoolLeftBtn.nextElementSibling
     goLeft(imgContainer);
 });
 
