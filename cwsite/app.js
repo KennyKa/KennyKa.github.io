@@ -61,18 +61,11 @@ function imageViewer(imgGalleryClass) {
         image.onclick = function() {
     
             fullSource = image.src;
-            imageName = (index + 1) + '.jpg';
+            imageName = (index + 1) + 'prew' + '.jpg';
             rawSource = '"' + fullSource.replace(imageName, '') + '"';
-            containerLen = imgGalleryClass.length;   
-    
-            console.log(rawSource);
-/*             if(rawSource == '"http://127.0.0.1:5500/projects_img/img"') {
-                console.log('YES');
-            } else {
-                console.log(rawSource);
-                console.log("http://127.0.0.1:5500/projects_img/img");
-            } */
-    
+            rawSourceClean = fullSource.replace(imageName, '');
+            containerLen = imgGalleryClass.length;
+ 
             getLatestOpenedImg = index + 1;
     
             let container = document.body;
@@ -82,10 +75,11 @@ function imageViewer(imgGalleryClass) {
             newImgWindow.setAttribute('onclick', 'closeImg()');
     
             let newImg = image.cloneNode();
+            newImg.src = newImg.src.replace(`prew`, '');
+
             newImgWindow.appendChild(newImg);
             newImg.classList.add('popup-img');
             newImg.setAttribute('id', 'current-img');    
-            
             newImg.onload = function() {
     
                 let newNextBtn = document.createElement('a');
@@ -124,7 +118,7 @@ function changeImg(change, path, containerLen) {
             calcNewImg = containerLen;
         }
     }
-
+    
     newImg.setAttribute('src', path + calcNewImg + '.jpg');
     newImg.setAttribute('class', 'popup-img');
     newImg.setAttribute('id', 'current-img');
