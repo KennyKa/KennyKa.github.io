@@ -1157,7 +1157,7 @@ a:visited {
     .link-text {
         font-size: 1.3rem;
         font-weight: bold;
-        color: var(--text-secondary);
+        color: var(--text-primary);
         padding-bottom: 0px;
         margin-left: 0px;
         box-shadow: 0 4px 2px -2px var(--text-secondary);
