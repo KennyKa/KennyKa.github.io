@@ -14,15 +14,15 @@
 :root {
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
-    --text-primary: #F2F2F2;
-    --text-secondary: #c7b299;
+    --text-primary: #1d6891;
+    --text-secondary: #dfe3ee;
     --bg-primary: #004D77;
-    --bg-secondary:#ad8b62;
-    --text-hover: #F2F2F2; 
+    --bg-secondary:#dfe3ee;
+    --text-hover: #E9A900; 
     --text-shadow: none;
     --transition-speed: 400ms;
     --lightgray: #b1b1b1;
-    --pr-bar: #004D77;
+    --pr-bar: #E9A900;
 }
 
 
@@ -178,7 +178,7 @@ header {
 }
 
 .left-area h3 {
-    color: var(--text-primary);
+    color: var(--text-secondary);
     margin: 0;
     text-transform: uppercase;
     font-size: 22px;
@@ -186,7 +186,7 @@ header {
 }
 
 .left-area span {
-    color: var(--text-secondary);
+    color: var(--text-hover);
 }
 
 .panel::-webkit-scrollbar {
@@ -844,7 +844,7 @@ a:visited {
     margin: 10px auto 20px;
     font-size: 2rem;
     text-align: center;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     text-shadow: none;
 }
 
@@ -892,7 +892,7 @@ a:visited {
     outline: none;
     border-radius: 15px;
     padding: 5px 15px;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
     margin: 5px 0 5px;
@@ -908,7 +908,7 @@ a:visited {
     outline: none;
     border-radius: 15px;
     padding: 20px 15px;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
     margin: 5px 0 10px;
@@ -1157,10 +1157,10 @@ a:visited {
     .link-text {
         font-size: 1.3rem;
         font-weight: bold;
-        color: var(--text-primary);
+        color: var(--text-secondary);
         padding-bottom: 0px;
         margin-left: 0px;
-        box-shadow: 0 4px 2px -2px var(--text-secondary);
+        box-shadow: 0 4px 2px -2px var(--text-shadow);
         display: none;
         animation: fade-out var(--transition-speed) 1 linear;
     }
