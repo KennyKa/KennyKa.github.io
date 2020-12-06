@@ -1,0 +1,73 @@
+:root {
+    font-size: 16px;
+    font-family: 'Arial';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #1d1e2c;
+    --bg-secondary: #141418;
+    --text-hover: #c43f3a; 
+    --transition-speed: 400ms;
+}
+
+
+/* Black - grey - red color scheme */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #181818;
+    --bg-secondary:#202020;
+    --text-hover: #c43f3a; 
+    --accent-color: #48ce9b;
+    --transition-speed: 400ms;
+    --lightgray: #b1b1b1;
+}
+
+/* Green - blue(?) - white scheme */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    --text-primary: #3a7c8a;
+/*     --text-primary: #3aafa9; */
+    --text-secondary:  #F0F6F7FF;
+    --bg-primary: #2BAE66FF;
+    --bg-secondary: #F0F6F7FF;
+    --text-hover: #464d4e; 
+    --transition-speed: 400ms;
+    --lightgray: #b1b1b1;
+}
+
+/* My livingroom color scheme -- It needs some work */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    --text-primary: #F2F2F2;
+    --text-secondary: #c7b299;
+    --bg-primary: #004D77;
+    --bg-secondary:#C7B299;
+    --text-hover: #F2F2F2; 
+    --text-shadow: #ad8b62;
+    --transition-speed: 400ms;
+    --lightgray: #b1b1b1;
+    --pr-bar: #004D77;
+}
+
+/* Torquise accent color scheme */
+
+:root {
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    --text-primary: #1d6891;
+    --text-secondary: #dfe3ee;
+    --bg-primary: #004D77;
+    --bg-secondary:#dfe3ee;
+    --text-hover: #3acbbd; 
+    --text-shadow: none;
+    --transition-speed: 400ms;
+    --lightgray: #b1b1b1;
+    --pr-bar: #3acbbd;
+}
