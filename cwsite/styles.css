@@ -17,9 +17,9 @@
     --text-primary: #F2F2F2;
     --text-secondary: #c7b299;
     --bg-primary: #004D77;
-    --bg-secondary:#C7B299;
+    --bg-secondary:#ad8b62;
     --text-hover: #F2F2F2; 
-    --text-shadow: #ad8b62;
+    --text-shadow: none;
     --transition-speed: 400ms;
     --lightgray: #b1b1b1;
     --pr-bar: #004D77;
@@ -844,7 +844,7 @@ a:visited {
     margin: 10px auto 20px;
     font-size: 2rem;
     text-align: center;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-shadow: none;
 }
 
@@ -871,7 +871,7 @@ a:visited {
     flex-wrap: wrap;
     background: var(--bg-primary);
     border-radius: 20px;
-    box-shadow: -5px -5px 10px rgba(255,255,255, 0.1),
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.2),
                 5px 5px 15px rgba(0,0,0, 0.6);
 }
 
@@ -892,7 +892,7 @@ a:visited {
     outline: none;
     border-radius: 15px;
     padding: 5px 15px;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
     margin: 5px 0 5px;
@@ -908,7 +908,7 @@ a:visited {
     outline: none;
     border-radius: 15px;
     padding: 20px 15px;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
     margin: 5px 0 10px;
