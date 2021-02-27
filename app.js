@@ -135,6 +135,8 @@ function closeImg() {
     }
     catch(err){
         console.log('hello');
+        document.querySelector('.img-btn-prev').remove();
+        document.querySelector('.img-btn-next').remove();
     }
         /*
     try {
