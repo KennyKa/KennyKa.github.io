@@ -129,7 +129,7 @@ function changeImg(change, path, containerLen) {
 
 function closeImg() {
     document.querySelector('.img-window').remove();
-    if (typeof document.querySelector('.img-btn-prev') !== null) {
+    if (typeof document.querySelector('.img-btn-prev') !== undefined) {
         document.querySelector('.img-btn-prev').remove();
         document.querySelector('.img-btn-next').remove();
     }
