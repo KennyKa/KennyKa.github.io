@@ -80,20 +80,20 @@ function imageViewer(imgGalleryClass) {
             newImgWindow.appendChild(newImg);
             newImg.classList.add('popup-img');
             newImg.setAttribute('id', 'current-img');    
-            newImg.onload = function() {
-    
-                let newNextBtn = document.createElement('a');
-                newNextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
-                container.appendChild(newNextBtn);
-                newNextBtn.setAttribute('class', 'img-btn-next');
-                newNextBtn.setAttribute('onclick', `changeImg(1, ${rawSource}, ${containerLen})`);
-    
-                let newPrevBtn = document.createElement('a');
-                newPrevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
-                container.appendChild(newPrevBtn);
-                newPrevBtn.setAttribute('class', 'img-btn-prev');
-                newPrevBtn.setAttribute('onclick', `changeImg(0, ${rawSource}, ${containerLen})`);
-            }
+
+
+            let newNextBtn = document.createElement('a');
+            newNextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+            container.appendChild(newNextBtn);
+            newNextBtn.setAttribute('class', 'img-btn-next');
+            newNextBtn.setAttribute('onclick', `changeImg(1, ${rawSource}, ${containerLen})`);
+
+            let newPrevBtn = document.createElement('a');
+            newPrevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+            container.appendChild(newPrevBtn);
+            newPrevBtn.setAttribute('class', 'img-btn-prev');
+            newPrevBtn.setAttribute('onclick', `changeImg(0, ${rawSource}, ${containerLen})`);
+
         }
     })
 }
