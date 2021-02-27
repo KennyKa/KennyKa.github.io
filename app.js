@@ -128,12 +128,11 @@ function changeImg(change, path, containerLen) {
 
 
 function closeImg() {    
-    document.querySelector('.img-btn-next').remove();
-    document.querySelector('.img-btn-prev').remove();
     if (typeof document.querySelector('.img-window') != null) {
+        document.querySelector('.img-btn-next').remove();
+        document.querySelector('.img-btn-prev').remove();
         document.querySelector('.img-window').remove();
-     }
-    
+    }    
 }
 
 
