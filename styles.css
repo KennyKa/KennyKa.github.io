@@ -609,12 +609,13 @@ main .right-content{
 
 .skill-wrapper {
     width: 75%;
-    margin: 60px auto;
+    margin: 30px auto;
     color: var(--text-primary);
 }
 
 .skill-ul {
     list-style: none;
+    padding-top: 20px;
     padding-left: 0;
     column-count: 2;
     column-gap: 100px;
@@ -636,6 +637,7 @@ main .right-content{
     text-align: center;
 }
 
+/*
 .bar {
     background: var(--bg-secondary);
     display: block;
@@ -653,29 +655,30 @@ main .right-content{
 }
 
 .grasshopper {
-    width: 50%;
+    width: 100%;
 }
 
 .tekla {
-    width: 70%;
+    width: 100%;
 }
 
 .axisvm {
-    width: 90%;
+    width: 100%;
 }
 
-.bim360 {
-    width: 60%;
+.consteel {
+    width: 100%;
 }
 
-.autocad {
-    width: 80%;
+.matlab {
+    width: 100%;
 }
 
 .python {
-    width: 30%;
+    width: 100%;
 }
 
+*/
 .other-skills {
     list-style: none;
     padding-left: 0;
