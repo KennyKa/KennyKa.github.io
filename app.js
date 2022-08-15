@@ -46,6 +46,7 @@ let spintopImages = document.querySelectorAll('.spintop-img');
 let rehauImages = document.querySelectorAll('.rehau-img');
 let schoolImages = document.querySelectorAll('.school-img');
 let giantImages = document.querySelectorAll('.giant-img');
+let spiralImages = document.querySelectorAll('.spiral-img');
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 
@@ -141,6 +142,7 @@ imageViewer(spintopImages)
 imageViewer(rehauImages)
 imageViewer(schoolImages)
 imageViewer(giantImages)
+imageViewer(spiralImages)
 
 
 //Scrolling
@@ -236,6 +238,20 @@ bscRightBtn.addEventListener('click', function() {
 
 bscLeftBtn.addEventListener('click', function() {
     let imgContainer = bscLeftBtn.nextElementSibling
+    goLeft(imgContainer);
+});
+
+// Spiral buttons and gallery
+let spiralRightBtn = document.querySelector('#spiral-right-btn')
+let spiralLeftBtn = document.querySelector('#spiral-left-btn')
+
+spiralRightBtn.addEventListener('click', function() {
+    let imgContainer = spiralRightBtn.previousElementSibling
+    goRight(imgContainer);
+});
+
+spiralLeftBtn.addEventListener('click', function() {
+    let imgContainer = spiralLeftBtn.nextElementSibling
     goLeft(imgContainer);
 });
 
